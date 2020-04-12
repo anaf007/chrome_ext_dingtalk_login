@@ -2,8 +2,6 @@
 // console.log(chrome);
 var host = window.location.host;
 
-$("#login-username").val('13123123')
-// console.log("==========username===========");
 
 console.log($(".j-inputtext dlemail j-nameforslide"));
 // $(".u-input box").children('input').val('1111');
