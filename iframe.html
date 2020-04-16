@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="__STATIC__/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h1>已经完成了扫码 ，请查看当前登录框。</h1>  
+    <h1>如果未输入账号密码，可点击下方退出后再重新扫码获取账号密码。</h1>
+
+    <a href="{:url('admin/passport/logout')}">退出</a>
+
+<script>
+
+function callParent() {
+    var targetExtensionId = "ajikaapbncbojcjdckmdapjikohjbpbf"; // 插件的ID
+    // {type: 'MsgFromPage', msg: 'Hello, I am page~'}  这里是传到popup.html插件页面的值
+    chrome.runtime.sendMessage(targetExtensionId, {type: 'MsgFromPage', msg: 'Hello, I am page~'}, function(response) {});
+}
+callParent();
+
+
+
+</script>
+</body>
+</html>

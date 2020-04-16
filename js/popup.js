@@ -20,7 +20,7 @@ function sendMessageToContentScript(message, callback)
 	});
 }
 
-
+// 事件监听
 chrome.runtime.onMessageExternal.addListener(function(request, sender, sendResponse) {
 
     if (request.type == 'MsgFromPage') {

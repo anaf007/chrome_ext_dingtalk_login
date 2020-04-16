@@ -1,7 +1,4 @@
 ﻿
-console.log('这是content script!');
-
-
 // 接收来自后台的消息
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
