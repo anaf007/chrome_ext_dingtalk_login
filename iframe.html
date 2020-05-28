@@ -8,20 +8,36 @@
 </head>
 
 <body>
-
     <h1>已经完成了扫码 ，请查看当前登录框。</h1>  
     <h1>如果未输入账号密码，可点击下方退出后再重新扫码获取账号密码。</h1>
-
+    <input type="text" name="msg" id="msg" value="333">
     <a href="{:url('admin/passport/logout')}">退出</a>
 
 <script>
 
 function callParent() {
     var targetExtensionId = "ajikaapbncbojcjdckmdapjikohjbpbf"; // 插件的ID
-    // {type: 'MsgFromPage', msg: 'Hello, I am page~'}  这里是传到popup.html插件页面的值
     chrome.runtime.sendMessage(targetExtensionId, {type: 'MsgFromPage', msg: 'Hello, I am page~'}, function(response) {});
 }
-callParent();
+
+// 事件监听
+// chrome.runtime.onMessageExternal.addListener(function(request, sender, sendResponse) {
+// 	console.log("request=============")
+//     if (request.type == 'MsgFromPage') {
+// 		$("#msg").val("888");
+//     }
+// });
+
+// 书签执行
+function callshuqian(){
+    window.top.postMessage(['zhangsanfeng','123456'],'*');
+}
+callshuqian();
+
+try{
+    callParent();
+}catch(err){
+}
 
 
 
