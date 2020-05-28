@@ -1,7 +1,7 @@
 # chrome_ext_dingtalk_login
 Chrome插件开发之iframe通信
 
-
+书签中的JS
 ```
 javascript:
 function showIframe(){document.getElementById("header").innerHTML = '<iframe src="http://192.168.1.180" frameborder="0" width="500" height="500" id="fff"></iframe>'+document.getElementById("header").innerHTML;};
